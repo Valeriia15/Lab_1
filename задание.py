@@ -18,7 +18,7 @@ for s in f:
     name = s[tz1 + 1:tz2]
     if len(name) > 30:
         nazvan += 1
-    if s.find(avtor) > 0:
+    if s.find(avtor) > 0 and s[tz6 + 7:tz6 + 11]=='2015' or s[tz6 + 7:tz6 + 11]=='2018':
         knigi = knigi + name + '\n'
     if i < 20:
         doc.write(s[tz3 + 1:tz4] + '. ' + s[tz1 + 1:tz2] + ' - ' + s[tz6 + 7:tz6 + 11] + '\n')
